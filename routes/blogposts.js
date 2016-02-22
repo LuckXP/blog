@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var BlogPost = require('../models/blogpost');
-var blogPost = new BlogPost;
+
 
 router.route('/blogposts')//post a new blog post
 	.post(function(req, res) {
@@ -25,7 +25,7 @@ router.route('/blogposts')//post a new blog post
 			if(err){
 				console.log(err);
 			} else {
-				res.json(blogPost);
+				res.json(blogPosts);
 			}
 		})
 	});
