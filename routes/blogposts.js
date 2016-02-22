@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var Bear = require('../models/blogpost');
+var BlogPost = require('../models/blogpost');
+var blogPost = new BlogPost;
 
 router.route('/blogposts')//post a new blog post
 	.post(function(req, res) {

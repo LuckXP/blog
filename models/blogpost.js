@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var BlogPost = new Schema({
 	postDate: {
 		type: Date,
-		default: Date.now,
+		// default: Date.now,
 		required: true,
 	},
 	postBody: {
@@ -15,6 +15,6 @@ var BlogPost = new Schema({
 		type: String,
 		required: true,
 	},
-});
+})
 
-module.exports = mongoose.model('BlogPost', BlogPostSchema);
+module.exports = mongoose.model('BlogPost', BlogPost);
