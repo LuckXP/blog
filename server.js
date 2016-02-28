@@ -21,7 +21,7 @@ app.get('/blogposts', function(req, res) {
 		if(err){
 			console.log(err);
 		} else {
-			res.render('blog', {blogPost: blogPost});
+			res.render('blogposts', {blogPosts: blogPosts});
 		}
 	})
 });
