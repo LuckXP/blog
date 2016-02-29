@@ -38,7 +38,8 @@ app.use(function(req, res, next) {
 
 app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
-	res.render('index', {title: 'show this ugly title object'});
+	var user = req.user || "no user";
+	res.render('index', {user: user});
 });
 
 app.get('/blogposts', function(req, res) {
