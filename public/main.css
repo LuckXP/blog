@@ -24,6 +24,15 @@ body {
   background-color: #f5f5f5;
 }
 
+.pannel-coral {
+  border-width: 5px;
+  border-color: #F07B4A ;
+  background-color: #1F1F1F
+}
+
+.coral{
+  background: #F07B4A;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
