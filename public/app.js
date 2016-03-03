@@ -37,9 +37,9 @@ var BlogPostPanels = React.createClass({
 		var mapBlogPostToPanel = this.props.blogPosts.
 			map( function(blogPost) {
 				return (
-					<div className="panel panel-coral">
-  						<div className="panel-heading coral">{blogPost.postDate}</div>
-  						<div className="panel-body">
+					<div className="panel">
+  						<div className="panel-heading panel-coral-heading">{blogPost.postDate}</div>
+  						<div className="panel-body panel-coral-body">
     						{blogPost.postBody}
   						</div>
 					</div>

@@ -2,15 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 var BlogPost = require('../models/blogpost');
-
+var user = require('../models/user');
 
 router.route('/blogposts')//post a new blog post
 	.post(function(req, res) {
+		var u = req.user || "no userrrrrr";
+		console.log(u);
 		var blogPost = new BlogPost();
 
-		blogPost.postDate = req.body.postDate;
-		blogPost.postBody = req.body.postBody
-		blogPost.author = req.body.author;
+
+		blogPost.postBody = req.body.postBody;
+		blogPost.author = req.user._id || '56d5e47b99a5a32f1b7cf9f8';
+		
+
 
 		blogPost.save(function(err, blogPost){
 			if(err){
@@ -21,7 +25,10 @@ router.route('/blogposts')//post a new blog post
 		})
 	})
 	.get(function(req, res) {
-		BlogPost.find(function(err, blogPosts){
+
+		BlogPost.find()
+		.populate('author')
+		.exec(function(err, blogPosts){
 			if(err){
 				console.log(err);
 			} else {

@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var BlogPost = new Schema({
 	postDate: {
 		type: Date,
-		// default: Date.now,
+		default: Date.now,
 		required: true,
 	},
 	postBody: {
@@ -12,8 +12,8 @@ var BlogPost = new Schema({
 		required: true,
 	},
 	author: {
-		type: String,
-		required: true,
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User',
 	},
 })
 

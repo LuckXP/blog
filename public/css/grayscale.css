@@ -56,6 +56,53 @@ a:focus {
     text-decoration: none;
     color: #1d9b6c;
 }
+.tweets {
+    background-image: url('https://www.cats.org.uk/uploads/images/pages/Twitter_logo_blue19.png'); 
+    background-repeat: no-repeat;
+    background-size: 67%;
+    background-position: 11% 35px;
+    border: 3px solid #44A8E1;
+}
+
+.panel-coral-heading {
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
+    border-bottom: 1px;
+}
+.panel-coral-tweets {
+    font-style: bold;
+    font-size: 30px;
+    color: black;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-bottom: 1px;
+
+}
+.panel-coral-footer {
+    background-color: rgba(68, 168, 225, 0.25);
+}
+.panel-image {
+    float: left;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+.panel-heading-text {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.panel-coral-body {
+    color: black;
+    font-size: 20px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .light {
     font-weight: 400;
@@ -259,6 +306,11 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
+
+}
+
+.content-section-2 {
+    padding-top: 30px;
 }
 
 .download-section {
@@ -282,6 +334,7 @@ a:focus {
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
+        width: 100%;
     }
 
     .download-section {

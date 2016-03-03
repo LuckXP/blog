@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <meta name="author" content="">
+        
 
         <title>Grayscale - Start Bootstrap Theme</title>
 
@@ -30,7 +30,6 @@
         <![endif]-->
 	</head>
   	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
         <!-- Navigation -->
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="container">
@@ -63,14 +62,14 @@
                         </li>
                         
                         <% if(user.local) { %>
-           					<li>
-           						<%= user.local.email %>
-        					</li>
-        				<% } else { %>
-            				<li>
-            					<a href="/login">log in</a>
-        					</li>
-        				<% } %>
+                            <li>
+                                <%= user.local.email %>
+                            </li>
+                        <% } else { %>
+                            <li>
+                                <a href="/login">log in</a>
+                            </li>
+                        <% } %>
                         
                     </ul>
                 </div>
@@ -78,30 +77,15 @@
             </div>
             <!-- /.container -->
         </nav>
+        
 
-        <!-- blog panels section -->
+        <!-- tweet panels section -->
         <section class="container content-section text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2" id="blogposts">
+                <div class="container col-sm-8 col-sm-offset-2" id="twitterapp">
                     
                 </div>
             </div>
-        </section>
-
-
-        <section class="container text-center" id="posthere">
-        	
-        	<form action="/api/blogposts" method="POST" role="form">
-        	
-        		<div class="form-group">
-        			<label for="">create a new post here</label>
-        			<input type="text" name="postBody" class="form-control" id="" placeholder="Input field">
-        		</div>
-        	
-        		
-        	
-        		<button type="submit" class="btn btn-primary">Submit</button>
-        	</form>
         </section>
 
         <!-- Footer -->
@@ -111,16 +95,15 @@
             </div>
         </footer>
 
-
-
-
-    	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    	<script src="https://cdn.jsdelivr.net/jquery.easing/1.3/jquery.easing.1.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    	<script type="text/jsx" src="app.js"></script>
-    	<script src="grayscale.js"></script>
-        <script src="https://fb.me/react-0.13.3.js"></script>
-        <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.easing/1.3/jquery.easing.1.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/jsx" src="twittersearchbar.js"></script>
+    <script type="text/jsx" src="tweetpanels.js"></script>
+    <script type="text/jsx" src="twitterapp.js"></script>
+    <script src="grayscale.js"></script>
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 
 	</body>
 </html>
