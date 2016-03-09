@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var Comment = require('../models/comment');
 var BlogPost = require('../models/blogpost');
 var user = require('../models/user');
 
@@ -28,6 +28,7 @@ router.route('/blogposts')//post a new blog post
 
 		BlogPost.find()
 		.populate('author')
+		.populate('comments')
 		.exec(function(err, blogPosts){
 			if(err){
 				console.log(err);
@@ -78,4 +79,30 @@ router.route('/blogposts/:blogpost_id')
 		})	
 	})
 
+router.route('/blogposts/:blogpost_id/comment')
+	.post(function(req, res){
+		var comment = new Comment();
+		comment.body = req.body.body ? req.body.body : comment.body;
+		comment.user = "56d4b62932bf3f9516a8c301";
+		comment.blogPost = req.params.blogpost_id;
+
+		comment.save(function(err, com){
+			if(err){
+				res.send(err);
+			} else {
+
+				BlogPost.findById(req.params.blogpost_id, function(err, blogPost){
+					if(err){
+						res.send(err);
+					} else {
+						blogPost.comments.push(com._id);
+						blogPost.save();
+						res.json(com);
+					}   
+				})
+			}
+		})
+	})
+
 module.exports = router;
+

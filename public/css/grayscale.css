@@ -332,10 +332,10 @@ a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
+    /*.content-section {
         padding-top: 250px;
-        width: 100%;
-    }
+        width: auto;
+    }*/
 
     .download-section {
         padding: 100px 0;
@@ -348,13 +348,14 @@ a:focus {
 }
 
 .btn {
-    border-radius: 0;
+    border-radius: 4px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    
 }
 
 .btn-default {
@@ -369,6 +370,24 @@ a:focus {
     outline: 0;
     color: #000;
     background-color: #42dca3;
+}
+
+.btn-twitter {
+    color: #44A8E1;
+    background-color: rgba(68, 168, 225, 0.25);
+    float: right;
+}
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+    border: 1px solid #44A8E1;
+    outline: 0;
+    color: #000;
+    background-color: rgba(68, 168, 225, 0.50);
+}
+
+.dropdown-menu-twitter{
+    float: right;
 }
 
 ul.banner-social-buttons {

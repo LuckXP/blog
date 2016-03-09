@@ -15,6 +15,9 @@ var BlogPost = new Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User',
 	},
+	comments: [{
+		type: mongoose.Schema.Types.ObjectId, ref: 'Comment'
+	}]
 })
 
 module.exports = mongoose.model('BlogPost', BlogPost);
